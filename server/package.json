@@ -1,0 +1,17 @@
+{
+  "name": "upthryve-server",
+  "version": "1.0.0",
+  "description": "UpThryve backend (Express)",
+  "main": "app.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon app.js"
+  },
+  "dependencies": {
+    "express": "^4.19.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.2"
+  }
+}

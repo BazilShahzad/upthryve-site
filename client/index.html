@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UpThryve - Digital Marketing Agency</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <header class="navbar">
+        <div class="container">
+            <div class="nav-left">
+                <a href="/" class="brand">
+                    <img src="images/logo.png" alt="UpThryve Logo" class="logo-img">
+                </a>
+            </div>
+
+            <nav class="nav-links">
+                <a href="/about">About</a>
+                <a href="/services">Services</a>
+                <a href="/portfolio">Portfolio</a>
+                <a href="/contact">Contact</a>
+            </nav>
+
+            <div class="nav-right">
+                <a href="/quote" class="quote-btn">GET A QUOTE</a>
+                <div class="lang-switcher">
+                    <!-- use your SVG or SVG file here -->
+                    <img src="images/uk-flag.svg" alt="UK" class="flag">
+                    <span class="lang-text">EN (UK)</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+    <!-- HERO SECTION -->
+    <section class="hero-section">
+
+        <!-- LEFT SIDE -->
+        <div class="hero-left">
+
+            <p class="top-text">TOP RATED AND AWARD WINNING</p>
+
+            <h1 class="hero-title">
+                Digital Marketing Agency in UK
+            </h1>
+
+            <h2 class="hero-subtitle">
+                That <span class="highlight">Delivers Results</span>
+            </h2>
+
+            <p class="hero-description">
+                Accelerate your business growth with our multi award-winning, Full Service Digital Marketing Agency in UK,
+                offering a broad spectrum of tailored digital solutions. With headquarters in the UK and branches worldwide,
+                our proven expertise ensures you outpace the competition and achieve measurable success.
+            </p>
+
+            <!-- INPUT + BUTTON -->
+            <div class="hero-input-wrapper">
+                <input type="text" id="websiteInput" placeholder="Enter Website Address">
+                <button onclick="goToForm()" class="proposal-btn">GET MY FREE PROPOSAL</button>
+            </div>
+
+            <!-- REVIEWS -->
+            <div class="review-row">
+                <div class="review-item">
+                    <img src="images/trustpilot.png" alt="Trustpilot">
+                    <p>4.9/5 (200 Reviews)</p>
+                </div>
+
+                <div class="review-item">
+                    <img src="images/google.png" alt="Google">
+                    <p>4.9/5 (95 Reviews)</p>
+                </div>
+
+                <div class="review-item">
+                    <img src="images/goodfirms.png" alt="GoodFirms">
+                    <p>5/5 (80 Reviews)</p>
+                </div>
+
+                <div class="review-item">
+                    <img src="images/clutch.png" alt="Clutch">
+                    <p>5/5 (23 Reviews)</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- RIGHT SIDE (3D AREA) -->
+       <div class="orbit-scene" aria-hidden="false">
+             <img src="images/laptop.png" alt="Laptop mockup" class="orbit-laptop">
+
+            <!-- orbit container (keeps layout tidy) -->
+            <div class="orbits">
+                <div class="orbit orbit-1">
+                <div class="bubble"><svg class="icon" viewBox="0 0 24 24"><path d="M22 5.9c-.6.3-1.2.5-1.9.6.7-.4 1.2-1 1.5-1.8-.7.4-1.4.7-2.2.8C18.2 4.5 17 4 15.7 4c-1.9 0-3.4 1.7-3 3.5C9.7 7.3 7.1 6.1 5.1 4.2c-.8 1.3-.4 3 .9 3.9-.6 0-1.1-.2-1.6-.4-.1 1.7 1.2 3.2 3 3.5-.5.1-1 .1-1.5.0.4 1.3 1.6 2.3 3 2.3C9.8 17 7.9 17.6 6 17.6c-.6 0-1 0-1.6-.1C4.6 18.6 6.6 19.5 9 19.5c7.2 0 11.2-6 11.2-11.2v-.5c.8-.6 1.4-1.3 1.9-2.1-.7.3-1.5.5-2.3.6z" fill="currentColor"/></svg></div>
+                </div>
+
+                <div class="orbit orbit-2">
+                <div class="bubble"><svg class="icon" viewBox="0 0 24 24"><path d="M6.94 2h10.12C21.07 2 22 2.93 22 4.06v15.88C22 21.07 21.07 22 17.06 22H6.94C2.93 22 2 21.07 2 19.94V4.06C2 2.93 2.93 2 6.94 2zM9 17.5V9h-2v8.5H9zm1-9.5h.02C10.97 8 12 6.98 12 5.57 12 4.09 10.97 3 9.98 3S8 4.09 8 5.57C8 6.98 8.97 8 10 8zM18 17.5V13c0-2.5-2-2.3-2-2.3 0-1 0-2 0-2h-2v8.5H18z" fill="currentColor"/></svg></div>
+                </div>
+
+                <div class="orbit orbit-3">
+                <div class="bubble"><svg class="icon" viewBox="0 0 24 24"><path d="M21.8 8s-.2-1.4-.8-2c-.7-.8-1.5-.8-1.9-.9-2.7-.2-6.8-.2-6.8-.2s-4.1 0-6.8.2c-.4 0-1.2.1-1.9.9C1.9 6.6 1.7 8 1.7 8S1.5 9.6 1.5 11.6v.3c0 2 .2 3.6.2 3.6s.2 1.4.8 2c.7.8 1.6.8 2.1.9 1.6.1 6.6.2 6.6.2s4.1 0 6.8-.2c.4 0 1.2-.1 1.9-.9.6-.7.8-2 .8-2s.2-1.6.2-3.6v-.3c0-2-.2-3.6-.2-3.6zM10 14.5V8.6l5 2.95-5 2.95z" fill="currentColor"/></svg></div>
+                </div>
+
+                <div class="orbit orbit-4">
+                <div class="bubble"><svg class="icon" viewBox="0 0 24 24"><path d="M12 2C7.6 2 4 5.6 4 10s3.6 8 8 8 8-3.6 8-8-3.6-8-8-8zm-1 13H9v-6h2v6zm4 0h-2v-4h2v4z" fill="currentColor"/></svg></div>
+                </div>
+
+                <div class="orbit orbit-5">
+                <div class="bubble"><svg class="icon" viewBox="0 0 24 24"><path d="M12 2a10 10 0 100 20 10 10 0 000-20zm1 14.5V7l5 4.5-5 5z" fill="currentColor"/></svg></div>
+                </div>
+            </div>
+        </div>
+
+
+    </section>
+
+
+<script>
+    function goToForm() {
+        const website = document.getElementById("websiteInput").value;
+        window.location.href = `/form.html?website=${encodeURIComponent(website)}`;
+    }
+
+
+        (function(){
+        const scene = document.querySelector('.orbit-scene');
+        if (!scene) return;
+        const laptop = scene.querySelector('.orbit-laptop');
+        scene.addEventListener('mousemove', (e) => {
+            const r = scene.getBoundingClientRect();
+            const x = (e.clientX - r.left) / r.width - 0.5; // -0.5 .. 0.5
+            const y = (e.clientY - r.top) / r.height - 0.5;
+            laptop.style.transform = `translateZ(20px) rotateX(${4 - y*6}deg) rotateY(${x*6}deg)`;
+            // slow subtle parallax for orbits
+            const orbits = scene.querySelectorAll('.orbit');
+            orbits.forEach((o,i) => {
+            o.style.transform = `translate(-50%,-50%) rotate(${(i%2 ? 1 : -1) * x * 8}deg)`;
+            });
+        });
+        scene.addEventListener('mouseleave', ()=> {
+            laptop.style.transform = `translateZ(20px) rotateX(4deg) rotateY(0deg)`;
+            document.querySelectorAll('.orbit').forEach(o=> o.style.transform='translate(-50%,-50%)');
+        });
+        })();
+</script>
+
+
+
+</body>
+</html>

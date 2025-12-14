@@ -15,23 +15,45 @@ body {
 }
 
 .navbar .container {
-  max-width: 1200px;             /* keeps content centered, prevents overflow */
+  width: 100%;
+  max-width: 1600px;     /* keeps things wide, reduces big gaps */
   margin: 0 auto;
-  height: 72px;                  /* fixed header height so logo can't stretch it */
-  padding: 0 24px;
+  height: 72px;
+
+  padding-left: 24px;   /* SAME value */
+  padding-right: 24px;  /* SAME value */
+
   display: flex;
   align-items: center;
   gap: 20px;
 }
 
+
 /* left / middle / right columns */
-.nav-left   { flex: 0 0 auto; display: flex; align-items: center; }
-.nav-links  { flex: 1 1 auto; display: flex; justify-content: center; gap: 36px; }
-.nav-right  { flex: 0 0 auto; display: flex; align-items: center; gap: 18px; min-width: 0; }
+
+.nav-left {
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+}
+
+.nav-links {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  gap: 48px; /* nice breathing room */
+}
+
+.nav-right {
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
 
 /* ===== Logo sizing (prevents header jump) ===== */
 .logo-img {
-  height: 38px;                  /* adjust this only; header height won't change */
+  height: 50px;                  /* adjust this only; header height won't change */
   width: auto;
   display: block;
   object-fit: contain;
@@ -236,6 +258,96 @@ html, body { overflow-x: hidden; }
 
 
 /* RIGHT SIDE OF HERO SECTION */
+
+
+
+
+
+/* SERVICES SECTION */
+/* General */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #0a0a0a;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+}
+
+.services-section {
+    width: 100%; /* full width */
+    max-width: 1700px; /* optional: keeps content centered on large screens  */
+    margin: 0 auto; /* center horizontally */
+    padding: 50px 0; /* remove horizontal padding */
+}
+
+
+.services-header h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.services-header h1 span {
+    color: #f3c623; /* yellow accent */
+}
+
+.services-header p {
+    margin-top: 20px;
+    line-height: 1.6;
+    color: #ccc;
+}
+
+/* Grid Layout */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    padding: 0 20px; /* optional small padding inside the grid */
+    margin-top: 50px;
+}
+.service {
+    background-color: #111;
+    border-radius: 10px;
+    padding: 20px;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+.service-icon {
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+.service h2 {
+    margin-bottom: 15px;
+    color: #f3c623;
+    font-size: 1.5rem;
+    transition: all 0.3s ease;
+}
+
+.service ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.service ul li {
+    margin-bottom: 10px;
+    line-height: 1.5;
+    color: #ccc;
+}
+
+/* Hover effect */
+.service:hover {
+    box-shadow: 0 0 20px #f3c623;
+    transform: translateY(-5px);
+}
+
+.service:hover h2 {
+    font-size: 1.6rem;
+}
+
+.service:hover li {
+    color: #fff;
+}
 
 
 

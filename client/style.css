@@ -275,7 +275,7 @@ body {
 
 .services-section {
     width: 100%; /* full width */
-    max-width: 1700px; /* optional: keeps content centered on large screens  */
+    max-width: 1800px; /* optional: keeps content centered on large screens  */
     margin: 0 auto; /* center horizontally */
     padding: 50px 0; /* remove horizontal padding */
 }
@@ -350,6 +350,210 @@ body {
 }
 
 
+
+
+/* ===============================
+   START A PROJECT – STARS + 5 SHOOTING STARS
+================================ */
+
+.start-project-section{
+  position: relative;
+  background: #000;
+  padding: 120px 20px;
+  overflow: hidden;
+}
+
+/* Pull content LEFT (not centered) with generous margin */
+.start-project-container{
+  position: relative;
+  z-index: 2;
+
+  /* left aligned */
+  max-width: 900px;
+  margin: 0;                 /* not centered */
+  padding-left: 80px;        /* generous left margin */
+  padding-right: 20px;
+}
+
+.start-project-title{
+  font-size: 64px;
+  font-weight: 700;
+  line-height: 1.1;
+  margin: 0 0 18px;
+}
+
+.start-project-title span{
+  color:#f7c948;
+}
+
+.start-project-text{
+  max-width: 680px;
+  font-size: 16px;
+  line-height: 1.7;
+  color: #ccc;
+  margin: 0 0 36px;
+}
+
+.start-project-input{
+  display:flex;
+  gap:15px;
+  max-width: 720px;
+}
+
+.start-project-input input{
+  flex:1;
+  padding: 14px 16px;
+  background: rgba(0,0,0,0.35);
+  border: 2px solid #f7c948;
+  color:#fff;
+  font-size:15px;
+  border-radius:4px;
+}
+
+.start-project-input button{
+  background:#f7c948;
+  color:#000;
+  font-weight:700;
+  padding: 14px 30px;
+  border:none;
+  border-radius:4px;
+  cursor:pointer;
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+
+.start-project-input button:hover{
+  transform: translateY(-2px);
+  box-shadow: 0 0 14px rgba(247,201,72,0.6);
+}
+
+/* Starfield background */
+.stars-bg{
+  position:absolute;
+  inset:0;
+  z-index:1;
+  pointer-events:none;
+  overflow:hidden;
+  opacity: .9;
+
+  background-image:
+    radial-gradient(2px 2px at 10% 20%, rgba(255,255,255,.75), transparent 60%),
+    radial-gradient(2px 2px at 30% 80%, rgba(255,255,255,.55), transparent 60%),
+    radial-gradient(2px 2px at 70% 30%, rgba(255,255,255,.65), transparent 60%),
+    radial-gradient(2px 2px at 90% 70%, rgba(255,255,255,.45), transparent 60%),
+    radial-gradient(3px 3px at 50% 50%, rgba(255,255,255,.20), transparent 60%);
+  background-repeat: repeat;
+  background-size: 220px 220px;
+}
+
+/* Twinkle overlay (subtle) */
+.stars-bg::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background-image:
+    radial-gradient(2px 2px at 15% 35%, rgba(255,255,255,.45), transparent 60%),
+    radial-gradient(2px 2px at 55% 15%, rgba(255,255,255,.35), transparent 60%),
+    radial-gradient(2px 2px at 75% 85%, rgba(255,255,255,.40), transparent 60%),
+    radial-gradient(2px 2px at 85% 45%, rgba(255,255,255,.30), transparent 60%);
+  background-repeat: repeat;
+  background-size: 340px 340px;
+  opacity: .25;
+  animation: starTwinkle 6s ease-in-out infinite;
+}
+
+@keyframes starTwinkle{
+  0%,100%{ opacity:.20; }
+  50%{ opacity:.45; }
+}
+
+/* ===== SHOOTING STARS (your “perfect” method adapted) ===== */
+.shoot{
+  position:absolute;
+  width: 4px;
+  height: 4px;
+  background:#fff;
+  border-radius:50%;
+  box-shadow:
+    0 0 0 4px rgba(255,255,255,0.10),
+    0 0 0 8px rgba(255,255,255,0.08),
+    0 0 18px rgba(255,255,255,0.95);
+  animation: shootAnim 3s linear infinite;
+  opacity:0;
+}
+
+/* tail */
+.shoot::before{
+  content:"";
+  position:absolute;
+  top:50%;
+  transform: translateY(-50%);
+  width: 260px;
+  height: 1px;
+  background: linear-gradient(90deg, rgba(255,255,255,1), rgba(255,255,255,0));
+}
+
+/* fly from top-left -> bottom-right (diagonal fall) */
+@keyframes shootAnim{
+  0%{
+    transform: rotate(315deg) translateX(0);
+    opacity:1;
+  }
+  70%{
+    opacity:1;
+  }
+  100%{
+    transform: rotate(315deg) translateX(-1500px);
+    opacity:0;
+  }
+}
+
+/* 5 stars at different “levels” (top offsets) + different speeds/delays */
+.shoot.s1{
+  top: 0px;
+  right: 120px;
+  left: initial;
+  animation-delay: 0.1s;
+  animation-duration: 1.4s;
+}
+
+.shoot.s2{
+  top: 60px;
+  right: 0px;
+  left: initial;
+  animation-delay: 0.8s;
+  animation-duration: 2.2s;
+}
+
+.shoot.s3{
+  top: 0px;
+  right: 380px;
+  left: initial;
+  animation-delay: 1.6s;
+  animation-duration: 1.8s;
+}
+
+.shoot.s4{
+  top: 220px;
+  right: 0px;
+  left: initial;
+  animation-delay: 2.3s;
+  animation-duration: 2.0s;
+}
+
+.shoot.s5{
+  top: 0px;
+  right: 720px;
+  left: initial;
+  animation-delay: 3.1s;
+  animation-duration: 2.6s;
+}
+
+/* Mobile */
+@media (max-width: 768px){
+  .start-project-title{ font-size:44px; }
+  .start-project-input{ flex-direction:column; }
+  .start-project-input button{ width:100%; }
+}
 
 
 /* ------------------------------- */

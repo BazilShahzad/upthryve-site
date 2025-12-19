@@ -1096,13 +1096,6 @@ body {
 
 /* web dev */
 
-/* ===============================
-   FROM DREAM TO REALITY HERO (FULL WIDTH)
-================================ */
-
-/* ===============================
-   FROM DREAM TO REALITY HERO (FIXED, Figma Accurate)
-================================ */
 
 .dream-hero-full{
   display:flex;
@@ -1213,3 +1206,156 @@ body {
 }
 
 
+/*  */
+
+/* ===============================
+   SEO INTRO STRIP
+================================ */
+
+.seo-intro{
+  flex: 1 1 50%;
+  background:whitesmoke;
+  color:black;
+  padding:40px 0;
+}
+
+.seo-intro-inner{
+  max-width:1200px;
+  padding: 40px 56px 56px;
+  /* margin:0 auto; */
+  padding:0 40px;           /* inner padding, no outer margin */
+}
+
+.seo-intro-heading{
+  margin:0 0 18px;
+  font-size:76px;
+  font-weight:800;
+  letter-spacing:0.04em;
+}
+
+.seo-intro-heading span{
+  color:#cc9c19;            /* yellow accent for "SEO" */
+}
+
+.seo-intro-text{
+  margin:0 0 26px;
+  font-weight: 300;
+  font-size:30px;
+  line-height:1.6;
+  color:black;
+}
+
+
+
+/* Button */
+.seo-intro-btn{
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
+  padding:12px 24px;
+  border-radius:6px;
+  border:none;
+  cursor:pointer;
+
+  background:#f7c948;
+  color:#000;
+  font-size:13px;
+  font-weight:800;
+  letter-spacing:0.12em;
+  text-transform:uppercase;
+
+  transition:transform .2s ease, box-shadow .2s ease, background .2s ease, color .2s ease;
+}
+
+.seo-intro-arrow{
+  font-size:16px;
+  transform:translateY(1px);
+}
+
+.seo-intro-btn:hover{
+  transform:translateY(-2px);
+  box-shadow:0 10px 24px rgba(0,0,0,0.55);
+  background:#000;
+  color:#f7c948;
+}
+
+/* responsive */
+@media (max-width:768px){
+  .seo-intro-inner{
+    padding:0 20px;
+  }
+  .seo-intro-heading{
+    font-size:28px;
+  }
+  .seo-intro-text{
+    font-size:15px;
+  }
+}
+
+
+/* ===============================
+   SEO FEATURED CASE STUDIES
+================================ */
+
+.seo-cases{
+  background:#000;
+  color:#fff;
+  padding:60px 0 80px;
+}
+
+.seo-cases-inner{
+  max-width:1200px;
+  padding:0 40px;
+}
+
+/* Header row */
+
+.seo-cases-header{
+  display:flex;
+  align-items:flex-end;
+  justify-content:space-between;
+  gap:24px;
+  margin-bottom:30px;
+}
+
+.seo-cases-title{
+  margin:0 0 8px;
+  font-size:76px;
+  font-weight:800;
+}
+
+.seo-cases-subtitle{
+  margin:0;
+  font-size:30px;
+  line-height:1.7;
+  color:rgba(255,255,255,0.8);
+}
+
+/* ===============================
+   SEO CASE STUDY IMAGES
+================================ */
+
+.seo-cases-images{
+  justify-content:space-between;
+  gap:10%;
+  margin-top:60px;
+}
+
+.seo-image{
+  width:40%;
+  overflow:hidden;
+  border-radius:18px;
+  position:relative;
+}
+
+.seo-image img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  display:block;
+  transition:transform .6s ease;
+}
+
+.seo-image:hover img{
+  transform:scale(1.05);
+}

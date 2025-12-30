@@ -1,25 +1,35 @@
-const express = require("express");
-const path = require("path");
+const express = require('express');
+const path = require('path');
+const quoteRoutes = require('./routes/quoteRoutes');
+
 const app = express();
 
-
-// Middlewares
+// Middleware
 app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 
-// Serve frontend
-app.use(express.static(path.join(__dirname, "public")));
+// Serve frontend files
+app.use(express.static(path.join(__dirname, '../client')));
 
-// Optional: make "/" explicitly serve index.html
-app.get("/", (req, res) => {
-  res.sendFile(path.join(__dirname, "public", "index.html"));
+// Routes
+app.use('/api/quotes', quoteRoutes);
+
+// Redirect /quote → /form
+app.get('/quote', (req, res) => {
+  res.redirect('/form');
 });
 
-// Test route
-app.get("/api/test", (req, res) => {
-  res.json({ success: true, message: "API working OK!" });
+// Pages
+app.get('/', (req, res) => {
+  res.sendFile(path.join(__dirname, '../client/pages/index.html'));
 });
 
-const PORT = process.env.PORT || 3005;
-app.listen(PORT, () => {
-  console.log(`Server running at http://localhost:${PORT}`);
+app.get('/form', (req, res) => {
+  res.sendFile(path.join(__dirname, '../client/pages/form.html'));
 });
+
+app.get('/admin', (req, res) => {
+  res.sendFile(path.join(__dirname, '../client/pages/admin.html'));
+});
+
+module.exports = app;
